@@ -1,0 +1,20 @@
+<configuration>
+    <!-- always a good activate OnConsoleStatusListener -->
+    <statusListener class="ch.qos.logback.core.status.OnConsoleStatusListener" />
+
+    <!-- We can optionally include a 3rd-party appender by adding it to classpath -->
+    <include optional="true" resource="logback-access-include.xml"/>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${jetty.home}/logs/access.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>access.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+        </rollingPolicy>
+
+        <encoder>
+            <pattern>combined</pattern>
+        </encoder>
+    </appender>
+
+    <appender-ref ref="FILE" />
+</configuration>
