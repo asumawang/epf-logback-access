@@ -21,7 +21,7 @@ dependencies {
 }
 
 ext {
-    git = org.ajoberstar.grgit.Grgit.open(dir: '..')
+    git = org.ajoberstar.grgit.Grgit.open(dir: '.')
     revision = git.head().id
 }
 

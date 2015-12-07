@@ -1,6 +1,5 @@
-package com.epatientfinder.ch.qos.logback.access;
+package ch.qos.logback.access.jetty;
 
-import ch.qos.logback.access.jetty.RequestLogImpl;
 import org.eclipse.jetty.util.component.LifeCycle;
 
 /**

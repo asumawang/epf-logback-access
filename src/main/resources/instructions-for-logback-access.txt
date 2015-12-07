@@ -1,0 +1,19 @@
+cd modules/
+curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/capture-all/logging.mod
+curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/centralized/webapp-logging.mod
+cp logback-access.mod .
+cd ..
+java -jar start.jar --add-to-start=logging,webapp-logging,logback-access
+#  Remove existing request log module or whatever so not active
+vi start.ini # comment out --module=requestlog
+cp jetty-logback-access.xml etc
+cp logback-access.xml resources
+cp logback-access-include.xml resources
+cp logback-include.xml resources
+xmlstarlet ed -L -s '/configuration' -t elem -n include -i '$prev' -t attr -n optional -v true -i '$prev/..' -t attr -n resource -v logback-include.xml resources/logback.xml 
+
+
+older example: https://github.com/jetty-project/jetty-and-logback-example
+
+https://github.com/jetty-project/logging-modules/tree/master/logback
+
