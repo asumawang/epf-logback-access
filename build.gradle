@@ -1,0 +1,29 @@
+buildscript {
+    repositories {
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'org.ajoberstar:grgit:1.1.0'
+    }
+}
+
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+}
+
+// In this section you declare the dependencies for your production and test code
+dependencies {
+    compile "ch.qos.logback:logback-access:1.1.3"
+    compile "org.eclipse.jetty:jetty-server:9.3.3.v20150827"
+}
+
+ext {
+    git = org.ajoberstar.grgit.Grgit.open(dir: '..')
+    revision = git.head().id
+}
+
+// Use abbreviatedId commit id for the version
+version = "${git.head().abbreviatedId}"
