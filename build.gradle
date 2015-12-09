@@ -9,9 +9,34 @@ buildscript {
 }
 
 apply plugin: 'java'
+apply plugin: 'ivy-publish'
 
 repositories {
     jcenter()
+    ivy {
+        url "s3://epf-ivy"
+        credentials(AwsCredentials) {
+            accessKey "${System.getenv('AWS_KEY')}"
+            secretKey "${System.getenv('AWS_SECRET')}"
+        }
+    }
+}
+
+publishing {
+    publications {
+        ivyJava(IvyPublication) {
+            from components.java
+        }
+    }
+    repositories {
+        ivy {
+            url "s3://epf-ivy"
+            credentials(AwsCredentials) {
+                accessKey "${System.getenv('AWS_KEY')}"
+                secretKey "${System.getenv('AWS_SECRET')}"
+            }
+        }
+    }
 }
 
 // In this section you declare the dependencies for your production and test code
@@ -27,3 +52,4 @@ ext {
 
 // Use abbreviatedId commit id for the version
 version = "${git.head().abbreviatedId}"
+group = 'ePatientFinder'

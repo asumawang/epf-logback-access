@@ -14,6 +14,9 @@
         <!-- Switch back to Logback Access implementation once fixed: https://github.com/qos-ch/logback/pull/269 -->
         <!-- That is, use RequestLogImpl instead -->
         <New id="RequestLog" class="ch.qos.logback.access.jetty.RequestLogImpl_Fix_LOGBACK_1052">
+            <!-- Not able to get this to work
+            <Set name="resource">logback-access.xml</Set>
+            -->
             <Set name="fileName"><Property name="jetty.home" default="."/>/resources/logback-access.xml</Set>
         </New>
     </Set>

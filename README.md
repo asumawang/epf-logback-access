@@ -2,6 +2,7 @@
 
 ## To install...
 ```
+# From jetty home
 cd modules/
 curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/capture-all/logging.mod
 curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/centralized/webapp-logging.mod
