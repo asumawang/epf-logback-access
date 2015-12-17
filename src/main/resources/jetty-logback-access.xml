@@ -17,7 +17,7 @@
             <!-- Not able to get this to work
             <Set name="resource">logback-access.xml</Set>
             -->
-            <Set name="fileName"><Property name="jetty.home" default="."/>/resources/logback-access.xml</Set>
+            <Set name="fileName"><Property name="jetty.base" default="."/>/resources/logback-access.xml</Set>
         </New>
     </Set>
 </Configure>
