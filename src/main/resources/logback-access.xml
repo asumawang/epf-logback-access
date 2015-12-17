@@ -6,7 +6,7 @@
     <include optional="true" resource="logback-access-include.xml"/>
 
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${jetty.home}/logs/access.log</file>
+        <file>${jetty.base}/logs/access.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <fileNamePattern>access.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
         </rollingPolicy>
