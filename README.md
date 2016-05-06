@@ -6,7 +6,7 @@
 cd modules/
 curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/capture-all/logging.mod
 curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/centralized/webapp-logging.mod
-curl -O https://raw.githubusercontent.com/robmoore/epf-logback-access/master/src/resources/logback-access.mod
+curl -O https://raw.githubusercontent.com/noelvillador/epf-logback-access/master/src/main/resources/logback-access.mod
 cd ..
 java -jar start.jar --add-to-start=logging,webapp-logging,logback-access
 cd etc

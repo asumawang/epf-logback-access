@@ -1,0 +1,8 @@
+JAVA=/bin/java
+JAVA_OPTIONS="-Xmx12g -Xss256k -Xms512m -XX:+UseParallelGC -XX:+UseNUMA -XX:+HeapDumpOnOutOfMemoryError -server"
+JETTY_HOME=/data/jetty
+JETTY_BASE=/data/SCT/
+JETTY_ARGS=jetty.http.port=8080
+JETTY_HOST=0.0.0.0
+JETTY_LOGS=/data/SCT/logs/
+JETTY_USER=jetty
