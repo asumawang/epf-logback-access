@@ -13,7 +13,7 @@
   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
     <file>${jetty.base}/logs/jetty.log</file>
     <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-      <fileNamePattern>jetty-%d{yyyy-MM-dd}.log.gz</fileNamePattern>
+      <fileNamePattern>${jetty.base}/logs/jetty-%d{yyyy-MM-dd}.log.gz</fileNamePattern>
       <maxHistory>30</maxHistory>
     </rollingPolicy>
 

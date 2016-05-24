@@ -35,8 +35,8 @@ cd $2
 mkdir modules
 cd modules
 
-curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/capture-all/logging.mod
-curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/centralized/webapp-logging.mod
+curl -O https://raw.githubusercontent.com/noelvillador/logging-modules/master/capture-all/logging.mod 
+curl -O https://raw.githubusercontent.com/noelvillador/logging-modules/master/centralized/webapp-logging.mod
 curl -O https://raw.githubusercontent.com/noelvillador/epf-logback-access/master/src/main/resources/logback-access.mod
 
 cd ..
@@ -50,7 +50,7 @@ cd ..
 
 #Hack since the logging plugin does not download this
 cd etc
-curl -O https://raw.githubusercontent.com/jetty-project/logging-modules/master/capture-all/jetty-logging.xml
+curl -O https://raw.githubusercontent.com/noelvillador/logging-modules/master/capture-all/jetty-logging.xml
 cd ..
 
 cd resources

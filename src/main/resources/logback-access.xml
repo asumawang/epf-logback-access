@@ -8,7 +8,7 @@
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${jetty.base}/logs/access.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-            <fileNamePattern>access.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <fileNamePattern>${jetty.base}/logs/access.log.%d{yyyy-MM-dd}.zip</fileNamePattern>
         </rollingPolicy>
 
         <encoder>
