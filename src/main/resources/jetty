@@ -1,8 +1,8 @@
 JAVA=/opt/jdk1.8.0_72/bin/java
 JAVA_OPTIONS="-Xmx12g -Xss256k -Xms512m -XX:+UseParallelGC -XX:+UseNUMA -XX:+HeapDumpOnOutOfMemoryError -server"
-JETTY_HOME=/data/jetty
-JETTY_BASE=/data/Auth/
+JETTY_HOME=/opt/jetty
+JETTY_BASE=/opt/GFRBridge/
 JETTY_ARGS=jetty.http.port=8080
 JETTY_HOST=0.0.0.0
-JETTY_LOGS=/data/SCT/logs/
+JETTY_LOGS=/opt/GFRBridge/logs/
 JETTY_USER=jetty
